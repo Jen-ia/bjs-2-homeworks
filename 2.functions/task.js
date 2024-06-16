@@ -4,9 +4,9 @@ function getArrayParams(...arr) {
   }
   let avg, sum = 0, min = arr[0], max = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i + 1]) {
+    if (arr[i] > max) {
       max = arr[i];
-    } else if (arr[i] < arr[i + 1]) {
+    } else if (min > arr[i]) {
       min = arr[i];
     }
     sum += arr[i];
@@ -32,9 +32,9 @@ function differenceMaxMinWorker(...arr) {
   }
   let min = arr[0], max = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i + 1]) {
+    if (arr[i] > max) {
       max = arr[i];
-    } else if (arr[i] < arr[i + 1]) {
+    } else if (arr[i] < min) {
       min = arr[i];
     }
   }
